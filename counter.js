@@ -1,9 +1,9 @@
-// Native Device Fingerprint Generator (No external JS library required)
+// Native Device Fingerprint (Zero external library dependencies)
 function getDeviceFingerprint() {
     try {
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
-        const txt = 'KamleshPortfolioUniqueKey2026';
+        const txt = 'KamleshPortfolioFingerprint2026';
         ctx.textBaseline = "top";
         ctx.font = "14px 'Arial'";
         ctx.fillStyle = "#f60";
@@ -30,13 +30,14 @@ async function updateVisitorCount() {
     const deviceId = getDeviceFingerprint();
     const hasVisited = localStorage.getItem('portfolio_visited_device');
 
-    // Free Counter API Endpoint (Reliable Zero-Setup API)
-    const counterUrl = 'https://api.counterapi.dev/v1/kamlesh_kumar_portfolio_2026/views'; // Using standard Hit API
+    // Working CountAPI Endpoint (Zero 410 Deprecated Error)
+    const namespace = "kamlesh_kumar_digital_resume_2026";
+    const key = "views";
 
     try {
         if (!hasVisited) {
-            // 1. नया Unique User -> Increment (+1)
-            const res = await fetch('https://api.mojodn.com/hit/kamlesh-kumar-portfolio-resume');
+            // 1. नया डिवाइस/इन्कॉग्निटो -> Hit Endpoint (+1 Increment)
+            const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
             const data = await res.json();
 
             if (data && typeof data.value !== 'undefined') {
@@ -46,8 +47,8 @@ async function updateVisitorCount() {
                 countElement.innerText = "1";
             }
         } else {
-            // 2. पुराना User -> Read Current Count
-            const res = await fetch('https://api.mojodn.com/get/kamlesh-kumar-portfolio-resume');
+            // 2. पुराना विजिटर -> Read Current Count
+            const res = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`);
             const data = await res.json();
 
             if (data && typeof data.value !== 'undefined') {
