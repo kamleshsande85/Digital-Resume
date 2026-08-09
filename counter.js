@@ -36,7 +36,7 @@ async function updateVisitorCount() {
 
     try {
         if (!hasVisited) {
-            // 1. नया डिवाइस/इन्कॉग्निटो -> Hit Endpoint (+1 Increment)
+            // नया डिवाइस/इन्कॉग्निटो -> Hit Endpoint (+1 Increment)
             const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
             const data = await res.json();
 
@@ -47,7 +47,7 @@ async function updateVisitorCount() {
                 countElement.innerText = "1";
             }
         } else {
-            // 2. पुराना विजिटर -> Read Current Count
+            // पुराना विजिटर -> Read Current Count
             const res = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`);
             const data = await res.json();
 
