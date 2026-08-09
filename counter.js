@@ -1,4 +1,22 @@
-// Device fingerprint - unique visitor identification
+
+
+// ===== FIREBASE SETUP =====
+// Step 3 से Copy किया हुआ Config यहाँ Paste करो
+const firebaseConfig = {
+  apiKey: "AIzaSyDJEfrvzNqv-OMZanX3gAR_RE3shFPJ3uk",
+  authDomain: "my-portfolio-counter-11a9a.firebaseapp.com",
+  databaseURL: "https://my-portfolio-counter-11a9a-default-rtdb.firebaseio.com",
+  projectId: "my-portfolio-counter-11a9a",
+  storageBucket: "my-portfolio-counter-11a9a.firebasestorage.app",
+  messagingSenderId: "431976575656",
+  appId: "1:431976575656:web:315c3a46f866f13a30089d"
+};
+
+// Firebase Initialize करो
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
+// ===== DEVICE FINGERPRINT (Unique Visitor Detect) =====
 function getDeviceId() {
     try {
         const canvas = document.createElement('canvas');
@@ -22,60 +40,51 @@ function getDeviceId() {
     }
 }
 
-// Main function to update visitor count
+// ===== VISITOR COUNTER =====
 async function updateVisitorCount() {
     const countElement = document.getElementById('visitor-count');
-    if (!countElement) {
-        console.warn('Element with id "visitor-count" not found');
-        return;
-    }
+    if (!countElement) return;
 
     const deviceId = getDeviceId();
-    const hasVisited = localStorage.getItem('portfolio_visited');
-
-    // CountAPI v2 endpoint (Working - No 410 error)
-    const namespace = "kamlesh_portfolio";
-    const key = "visitors";
+    const hasVisited = localStorage.getItem('portfolio_visited_' + deviceId);
+    const visitorRef = database.ref('totalVisitors'); // Firebase में count save होगा
 
     try {
         if (!hasVisited) {
-            // New visitor - increment count
-            const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
-            const data = await response.json();
-            
-            if (data && typeof data.value !== 'undefined') {
-                countElement.innerText = data.value;
-                localStorage.setItem('portfolio_visited', 'true');
-                localStorage.setItem('visitor_device', deviceId);
-            } else {
-                // Fallback: local storage
-                let count = parseInt(localStorage.getItem('local_count') || '0') + 1;
-                countElement.innerText = count;
-                localStorage.setItem('local_count', count);
-                localStorage.setItem('portfolio_visited', 'true');
-            }
+            // Naya Visitor - Global Count ++
+            await visitorRef.transaction((currentCount) => {
+                return (currentCount || 0) + 1;
+            }, (error, committed, snapshot) => {
+                if (error) {
+                    console.error('Firebase Error:', error);
+                    // Fallback - Local Storage
+                    let fallback = parseInt(localStorage.getItem('fallback_count') || '0') + 1;
+                    countElement.innerText = fallback;
+                    localStorage.setItem('fallback_count', fallback);
+                } else if (committed) {
+                    countElement.innerText = snapshot.val();
+                    localStorage.setItem('portfolio_visited_' + deviceId, 'true');
+                }
+            });
         } else {
-            // Returning visitor - get current count
-            const response = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`);
-            const data = await response.json();
-            
-            if (data && typeof data.value !== 'undefined') {
-                countElement.innerText = data.value;
-            } else {
-                // Fallback: local storage
-                let count = localStorage.getItem('local_count') || '1';
+            // Wapas Aaya Visitor - Sirf Count Dikhao
+            visitorRef.once('value', (snapshot) => {
+                const count = snapshot.val() || 1;
                 countElement.innerText = count;
-            }
+            }).catch((error) => {
+                // Fallback
+                let fallback = localStorage.getItem('fallback_count') || '1';
+                countElement.innerText = fallback;
+            });
         }
     } catch (error) {
-        console.error('Visitor Counter Error:', error);
-        // Ultimate fallback: local storage
-        let count = localStorage.getItem('local_count') || '1';
-        countElement.innerText = count;
+        console.error('Counter Error:', error);
+        let fallback = localStorage.getItem('fallback_count') || '1';
+        countElement.innerText = fallback;
     }
 }
 
-// Auto-run when page loads
+// ===== AUTO-RUN =====
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', updateVisitorCount);
 } else {
