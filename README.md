@@ -1,85 +1,39 @@
-# Kamlesh Kumar - Network Engineer Resume
+# 🌐 Kamlesh Kumar - Digital Resume & Portfolio
 
-> **Network Engineer | CCNA Trained | MCA Graduate**
+A professional, responsive web-based digital resume built to showcase my expertise, practical projects, and professional background as an aspiring **Network Engineer / NOC Engineer**. 
 
-Professional resume showcasing expertise in **Computer Networking**, routing, switching, and network security.
-
-## 👤 About Me
-
-Network Engineer with hands-on experience in configuring and troubleshooting core L2/L3 networking protocols including **OSPF, EIGRP, VLANs, STP, HSRP, ACLs, and Port Security**. 
-
-**MCA Graduate** | CCNA Trained | Proficient in network automation using Python and monitoring using Wireshark, Syslog, and SNMP.
-
-Committed to continuous learning and delivering operational excellence in enterprise networking environments.
-
-## 📋 Key Technical Skills
-
-### 🌐 Networking & Infrastructure
-- **Routing:** OSPF (Multi-Area), EIGRP, RIP, Static Routing, Inter-VLAN Routing
-- **Switching:** VLANs, 802.1Q Trunking, STP/RSTP/PVST+, EtherChannel (LACP/PAgP)
-- **Security (Network):** ACLs, NAT/PAT, Port Security, DHCP Snooping, DAI, SSH, HSRP
-- **Services:** DHCP, Syslog, SNMP, NTP, Wireshark, Ping/Traceroute
-- **Tools:** Cisco Packet Tracer, GNS3, Python (Network Automation)
-
-## 📞 Contact Information
-
-- **Email:** kamleshsande85@yahoo.com
-- **Phone:** +91 6266314789
-- **GitHub:** [github.com/kamleshsande85](https://github.com/kamleshsande85)
-- **LinkedIn:** [linkedin.com/in/kamlesh-kumar-9921282bb/](https://www.linkedin.com/in/kamlesh-kumar-9921282bb/)
-
-## 📄 Resume
-
-**Latest Resume (August 2026):**
-- [Download PDF](./Kamlesh_Kumar_Aug_2026.pdf)
-
-## 🎓 Education
-
-- **Master of Computer Applications (MCA)**
-  - Pt. Ravishankar Shukla University, Raipur
-  - 2023 – 2025 | CGPA: 76.73%
-
-- **B.Sc. (Computer Science)**
-  - T.C.L. Govt. P.G. College, Janjgir
-  - 2021 – 2023 | CGPA: 73.55%
-
-## 🏆 Certifications & Training
-
-### Networking & Cloud
-- Cisco: Networking Basics
-- Google: Bits & Bytes of Networking
-- IBM: Computer Networks & Security
-- AWS: Getting Started with Networking
-
-### In Progress
-- CompTIA Network+
-- CCNA (Cisco Certified Network Associate)
-
-## 💼 Professional Experience
-
-### Executive – Help Desk
-**Perto India Pvt. Ltd., Jaipur** | Feb 2026 – June 2026
-- Managed end-to-end IT helpdesk tickets and user support ensuring SLA compliance
-- Coordinated with field engineers for service requests and incident resolution
-
-### Desktop Support Engineer
-**Kaizen IT Services, Raipur** | Sep 2025 – Feb 2026
-- Delivered Field Managed Services (FMS) supporting 100+ end-users
-- Maintained 99% IT uptime
-- Configured and maintained network endpoints, VPNs, and switch access ports
-
-## 🚀 Projects & Practical Experience
-
-- **Multi-Site Enterprise Network** - Built 3-site network using Multi-Area OSPF, VLANs, and Extended ACLs
-- **High-Availability Campus Network** - Implemented HSRP and LACP EtherChannel for 400% bandwidth improvement
-- **Secure Enterprise Network** - Deployed Port Security, DHCP Snooping, and Dynamic ARP Inspection
-- **Network Automation Lab (Python)** - Scripted SSH device configurations and automated backups
-- **NOC Monitoring Simulation** - Set up centralized Syslog, SNMP, and NTP logging across 10+ devices
-
-## 🌐 View Resume Online
-
-This repository includes an interactive HTML resume at `index.html` that you can view directly in your browser.
+🔗 **Live Portfolio:** [View Website](https://kamleshsande85.github.io/Digital-Resume/) *(or your deployed link)*
 
 ---
 
-**License:** MIT License. See LICENSE for details.
+## 🚀 Purpose of This Repository
+This repository hosts the source code for my interactive digital portfolio. It is designed to provide recruiters and technical teams with a clear, fast-loading, and comprehensive overview of my networking skills, hands-on lab projects, and professional experience without the clutter of unrelated fields.
+
+---
+
+## 🛠️ Tech Stack
+* **Frontend:** HTML5, CSS3 (Custom Responsive Grid Layout)
+* **Hosting / Deployment:** GitHub Pages
+* **Dynamic Features:** Firebase SDK (Visitor Counter Integration)
+
+---
+
+## 📋 Key Sections Included
+* **Professional Summary:** Tailored for Network Engineering and NOC operations.
+* **Technical Skills:** 
+  * **Routing (L3):** OSPF (Multi-Area), EIGRP, RIP, Static Routing, Inter-VLAN Routing.
+  * **Switching (L2):** VLANs, 802.1Q Trunking, STP/RSTP/PVST+, EtherChannel, Port Security.
+  * **Security & Redundancy:** ACLs, NAT/PAT, DHCP Snooping, DAI, SSH, HSRP.
+  * **Tools & Automation:** Cisco Packet Tracer, GNS3, Python Scripting.
+* **Projects & Practical Experience:** Detailed documentation of enterprise network simulations (Multi-Site OSPF, High-Availability Campus, Network Automation Lab, and NOC Monitoring).
+* **Work Experience:** Professional background in IT support and field managed services (Perto India & Kaizen IT Services).
+* **Certifications:** Industry credentials from Cisco, Google, IBM, AWS, and NVIDIA.
+
+---
+
+## 📂 Repository Structure
+```text
+├── index.html       # Main portfolio page
+├── style.css        # Custom styling and responsive layout
+├── counter.js       # Firebase visitor tracking script
+└── README.md        # Project documentation
