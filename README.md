@@ -1,76 +1,85 @@
-# Digital Resume
+# Kamlesh Kumar - Network Engineer Resume
 
-> Replace the ALL-CAPS placeholders below with your actual details before publishing.
+> **Network Engineer | CCNA Trained | MCA Graduate**
 
-## NAME
-YOUR_FULL_NAME
+Professional resume showcasing expertise in **Computer Networking**, routing, switching, and network security.
 
-## Tagline / One-line summary
-A short sentence that summarizes who you are and what you do (e.g., "Full-stack engineer focusing on scalable web applications").
+## 👤 About Me
 
-## About / Objective
-A concise paragraph (2–4 sentences) describing your professional objective, domain expertise, and what you're looking for in 2025. Example:
+Network Engineer with hands-on experience in configuring and troubleshooting core L2/L3 networking protocols including **OSPF, EIGRP, VLANs, STP, HSRP, ACLs, and Port Security**. 
 
-> I'm a software engineer with 5+ years building scalable web applications. I enjoy designing reliable backend services and shipping delightful user experiences. I'm seeking roles in backend systems, cloud-native platforms, or developer tooling.
+**MCA Graduate** | CCNA Trained | Proficient in network automation using Python and monitoring using Wireshark, Syslog, and SNMP.
 
-## Contact
-- Email: YOUR_EMAIL@example.com
-- Location: City, Country
-- LinkedIn: https://www.linkedin.com/in/YOUR_PROFILE
-- GitHub: https://github.com/kamleshsande85
+Committed to continuous learning and delivering operational excellence in enterprise networking environments.
 
-## Key Skills
-- Languages: JavaScript/TypeScript, Python, Java
-- Frontend: React, Vue
-- Backend: Node.js, Express, Spring Boot
-- Databases: PostgreSQL, MongoDB
-- DevOps: Docker, Kubernetes, CI/CD
-- Testing & Tooling: Jest, Cypress, GitHub Actions
+## 📋 Key Technical Skills
 
-## Professional Summary
-- 5+ years building production web applications and scalable APIs.
-- Experience leading small engineering teams and mentoring junior developers.
-- Strong emphasis on observability, performance, and test automation.
+### 🌐 Networking & Infrastructure
+- **Routing:** OSPF (Multi-Area), EIGRP, RIP, Static Routing, Inter-VLAN Routing
+- **Switching:** VLANs, 802.1Q Trunking, STP/RSTP/PVST+, EtherChannel (LACP/PAgP)
+- **Security (Network):** ACLs, NAT/PAT, Port Security, DHCP Snooping, DAI, SSH, HSRP
+- **Services:** DHCP, Syslog, SNMP, NTP, Wireshark, Ping/Traceroute
+- **Tools:** Cisco Packet Tracer, GNS3, Python (Network Automation)
 
-## Experience
-List your recent roles with company, title, date range, and 2–4 bullet points of achievements.
+## 📞 Contact Information
 
-Example:
-- Company Name — Senior Software Engineer (2022 - Present)
-  - Built a microservices platform that reduced deployment time by 40%.
-  - Led a cross-functional team of 4 engineers to deliver a high-traffic feature.
-  - Implemented observability and reduced incident MTTR by 30%.
+- **Email:** kamleshsande85@yahoo.com
+- **Phone:** +91 6266314789
+- **GitHub:** [github.com/kamleshsande85](https://github.com/kamleshsande85)
+- **LinkedIn:** [linkedin.com/in/kamlesh-kumar-9921282bb/](https://www.linkedin.com/in/kamlesh-kumar-9921282bb/)
 
-## Projects
-Highlight a few portfolio projects with links and short descriptions.
+## 📄 Resume
 
-- Project Name — short description. Repo: https://github.com/kamleshsande85/ProjectRepo
-- Portfolio Site — A personal website showcasing projects and blog posts.
+**Latest Resume (August 2026):**
+- [Download PDF](./Kamlesh_Kumar_Aug_2026.pdf)
 
-## Education
-- Degree, Major — Institution (Year)
+## 🎓 Education
 
-## Certifications
-- Certification name — Issuing organization (Year)
+- **Master of Computer Applications (MCA)**
+  - Pt. Ravishankar Shukla University, Raipur
+  - 2023 – 2025 | CGPA: 76.73%
 
-## How to use this repository
-This repo contains a machine-readable resume and supporting project links for 2025.
-- Read or edit this README to keep your resume up to date.
-- Use the content to export or print a PDF-ready resume from GitHub.
+- **B.Sc. (Computer Science)**
+  - T.C.L. Govt. P.G. College, Janjgir
+  - 2021 – 2023 | CGPA: 73.55%
 
-## Tips for customization
-- Replace every ALL-CAPS placeholder with your real data.
-- Focus bullets on impact and metrics (e.g., "improved X by Y%", "reduced cost by $Z").
-- Keep the README concise — recruiters skim quickly.
+## 🏆 Certifications & Training
 
-## License
-This repository is published under the MIT License. See LICENSE for details.
+### Networking & Cloud
+- Cisco: Networking Basics
+- Google: Bits & Bytes of Networking
+- IBM: Computer Networks & Security
+- AWS: Getting Started with Networking
+
+### In Progress
+- CompTIA Network+
+- CCNA (Cisco Certified Network Associate)
+
+## 💼 Professional Experience
+
+### Executive – Help Desk
+**Perto India Pvt. Ltd., Jaipur** | Feb 2026 – June 2026
+- Managed end-to-end IT helpdesk tickets and user support ensuring SLA compliance
+- Coordinated with field engineers for service requests and incident resolution
+
+### Desktop Support Engineer
+**Kaizen IT Services, Raipur** | Sep 2025 – Feb 2026
+- Delivered Field Managed Services (FMS) supporting 100+ end-users
+- Maintained 99% IT uptime
+- Configured and maintained network endpoints, VPNs, and switch access ports
+
+## 🚀 Projects & Practical Experience
+
+- **Multi-Site Enterprise Network** - Built 3-site network using Multi-Area OSPF, VLANs, and Extended ACLs
+- **High-Availability Campus Network** - Implemented HSRP and LACP EtherChannel for 400% bandwidth improvement
+- **Secure Enterprise Network** - Deployed Port Security, DHCP Snooping, and Dynamic ARP Inspection
+- **Network Automation Lab (Python)** - Scripted SSH device configurations and automated backups
+- **NOC Monitoring Simulation** - Set up centralized Syslog, SNMP, and NTP logging across 10+ devices
+
+## 🌐 View Resume Online
+
+This repository includes an interactive HTML resume at `index.html` that you can view directly in your browser.
 
 ---
 
-If you'd like, I can:
-- Fill this README with specific content from your resume, LinkedIn profile, or provided details.
-- Generate a PDF-ready resume layout (A4/US Letter) from this content.
-- Add badges, contact privacy tips, or a short portfolio page in the repo.
-
-Tell me which of these you want next and provide any profile details you want included.
+**License:** MIT License. See LICENSE for details.
