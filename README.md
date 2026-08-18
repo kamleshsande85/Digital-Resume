@@ -1,4 +1,4 @@
-# 🌐 Kamlesh Kumar - Digital Resume & Portfolio
+# 🌐 Digital Resume & Portfolio
 
 A professional, responsive web-based digital resume built to showcase my expertise, practical projects, and professional background as an aspiring **Network Engineer / NOC Engineer**. 
 
